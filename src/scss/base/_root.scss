@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap');
 
 :root {
-  --ff: '#{$font-family}';
+  --ff: #{$font-family};
   @each $fs-name, $fs-value in $font-sizes {
     --fs-#{$fs-name}: #{$fs-value};
   }
@@ -13,5 +13,8 @@
   }
   @each $color-name, $color-value in $colors {
     --clr-#{$color-name}: #{$color-value};
+  }
+  @each $z-index-name, $z-index-value in $z-indexes {
+    --zindex-#{$z-index-name}: #{$z-index-value};
   }
 }

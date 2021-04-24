@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
 
-  @include mq(small) {
+  @include mq(small, up) {
     flex-direction: row;
   }
 
@@ -14,7 +14,7 @@
     + * {
       margin: 2.5rem 0 0 0;
 
-      @include mq(small) {
+      @include mq(small, up) {
         margin: 0 0 0 2.5rem;
       }
     }

@@ -1,0 +1,18 @@
+.hamburger-menu {
+  border: none;
+  background-color: transparent;
+  background-image: url('../../assets/images/icon-hamburger.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 18px;
+  background-size: cover;
+}
+
+.hamburger-menu.clicked {
+  background-image: url('../../assets/images/icon-close.svg');
+  width: 21px;
+  height: 22px;
+  position: relative;
+  z-index: var(--zindex-close-button);
+}

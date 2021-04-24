@@ -1,0 +1,11 @@
+body {
+  font-family: var(--ff);
+  line-height: 1.6;
+  color: var(--clr-primary-blue);
+}
+
+a[class] {
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
+}

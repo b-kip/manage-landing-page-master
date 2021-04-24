@@ -1,0 +1,26 @@
+@use '../abstracts/mixins' as *;
+
+.nav {
+  text-align: center;
+  position: relative;
+  z-index: var(--zindex-modal);
+  margin-top: 3rem;
+
+  &__list {
+    background-color: var(--clr-neutral-white);
+    border-radius: 0.3em;
+
+    @include prepend-selector(ul) {
+      padding: 1.5em 0;
+    }
+
+    &__item {
+      font-weight: var(--fw-bold);
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+  }
+  .btn {
+    display: none;
+  }
+}

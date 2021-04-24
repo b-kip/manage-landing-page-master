@@ -1,1 +1,5 @@
-$z-indexes: ();
+$z-indexes: (
+  overlay: 1000,
+  close-button: 1050,
+  modal: 1100,
+);

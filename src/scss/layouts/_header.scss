@@ -1,0 +1,21 @@
+@use '../abstracts/breakpoint' as *;
+.main-header {
+  margin-top: 2.5rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  @include mq(small, down) {
+    width: 75%;
+  }
+}
