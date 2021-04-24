@@ -5,6 +5,20 @@
   .container {
     display: flex;
     flex-direction: column;
+
+    @include mq(x-large, up) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .btn {
+    display: none;
+
+    @include mq(x-large, up) {
+      display: inline-block;
+    }
   }
 }
 
@@ -17,5 +31,9 @@
 .logo {
   @include mq(small, down) {
     width: 75%;
+  }
+
+  @include mq(large, up) {
+    width: 100%;
   }
 }

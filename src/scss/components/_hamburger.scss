@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .hamburger-menu {
   border: none;
   background-color: transparent;
@@ -7,6 +9,15 @@
   width: 25px;
   height: 18px;
   background-size: cover;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  @include mq(x-large, up) {
+    display: none;
+  }
 }
 
 .hamburger-menu.clicked {

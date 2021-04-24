@@ -1,4 +1,4 @@
-@use '../abstracts/mixins' as *;
+@use '../abstracts' as *;
 
 .nav {
   text-align: center;
@@ -6,9 +6,18 @@
   z-index: var(--zindex-modal);
   margin-top: 3rem;
 
+  @include mq(x-large, up) {
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+  }
+
   &__list {
     background-color: var(--clr-neutral-white);
     border-radius: 0.3em;
+    flex-basis: 100%;
 
     @include prepend-selector(ul) {
       padding: 1.5em 0;
@@ -18,9 +27,19 @@
       font-weight: var(--fw-bold);
       padding-top: 0.75rem;
       padding-bottom: 0.75rem;
+
+      @include mq(x-large, up) {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      & + & {
+        margin: 0 0 0 2rem;
+      }
     }
-  }
-  .btn {
-    display: none;
+
+    @include mq(x-large, up) {
+      display: flex;
+    }
   }
 }
