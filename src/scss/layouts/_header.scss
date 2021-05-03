@@ -29,11 +29,11 @@
 }
 
 .logo {
-  @include mq(small, down) {
-    width: 75%;
-  }
+  // @include mq(small, down) {
+  //   width: 75%;
+  // }
 
-  @include mq(large, up) {
-    width: 100%;
-  }
+  // @include mq(large, up) {
+  //   width: 100%;
+  // }
 }

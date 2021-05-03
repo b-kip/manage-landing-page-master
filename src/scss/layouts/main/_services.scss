@@ -1,0 +1,97 @@
+@use '../../abstracts/breakpoint' as *;
+
+.services {
+  .container {
+    margin-left: 1em;
+    margin-right: 0;
+
+    @include mq(small, up) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include mq(large, up) {
+      display: flex;
+      gap: 4rem;
+    }
+  }
+
+  &__header {
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @include mq(large, up) {
+      text-align: left;
+      flex-basis: 100%;
+    }
+
+    &__title {
+      font-size: 2.75rem;
+      line-height: 1.1;
+    }
+
+    p {
+      @include mq(large, up) {
+        max-width: 36ch;
+        --flow-spacer: 2rem;
+      }
+    }
+  }
+
+  &__list {
+    --flow-spacer: 3rem;
+    // first use of important : (
+    // overriding my reset
+    margin-top: 4rem !important;
+
+    @include mq(large, up) {
+      text-align: left;
+      flex-basis: 100%;
+      margin-top: 0rem !important;
+    }
+
+    &__item {
+      &__header {
+        background-color: rgba(#f25f3a, 0.175);
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        border-bottom-left-radius: 5vh;
+        border-top-left-radius: 5vh;
+
+        @include mq(medium, up) {
+          gap: 1.75rem;
+        }
+        @include mq(large, up) {
+          background-color: transparent;
+        }
+      }
+
+      span {
+        background-color: var(--clr-primary-red);
+        color: var(--clr-neutral-white);
+        font-weight: var(--fw-medium);
+        padding: 0.5em 1em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        border-radius: 5vh;
+      }
+
+      &__title {
+        font-size: 1rem;
+        // display: inline-block;
+      }
+
+      p {
+        --flow-spacer: 0.75rem;
+        margin-right: 1.5rem;
+
+        @include mq(medium, up) {
+          margin-right: 0;
+          margin-left: 6rem;
+        }
+      }
+    }
+  }
+}

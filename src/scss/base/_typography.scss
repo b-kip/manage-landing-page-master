@@ -1,11 +1,37 @@
+@use '../abstracts/breakpoint' as *;
+
 body {
   font-family: var(--ff);
   line-height: 1.6;
+  color: var(--clr-neutral-blue-400);
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-primary-blue);
+  font-weight: var(--fw-bold);
+}
+
+a:hover,
+a:focus {
+  opacity: 0.5;
+}
+
+h1,
+h2,
+h3 {
   color: var(--clr-primary-blue);
 }
 
-a[class] {
-  text-decoration: none;
-  color: inherit;
-  font-weight: inherit;
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+
+  @include mq(large, up) {
+    font-size: 3.25rem;
+  }
+}
+
+h2 {
+  font-size: 1.75rem;
 }

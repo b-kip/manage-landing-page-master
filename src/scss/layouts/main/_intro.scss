@@ -1,0 +1,46 @@
+@use '../../abstracts/breakpoint' as *;
+
+.intro {
+  text-align: center;
+  margin-top: 3rem;
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    @include mq(large, up) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__info {
+    @include mq(large, up) {
+      text-align: left;
+      max-width: 44ch;
+      margin-top: 5rem;
+    }
+
+    &__lead {
+      @include mq(large, up) {
+        max-width: 36ch;
+      }
+    }
+
+    &__btn {
+      margin-top: 2rem;
+    }
+  }
+
+  &__image {
+    // background-image: url('../../assets/images/illustration-intro.svg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // height: 100px;
+    // order: 0;
+  }
+}

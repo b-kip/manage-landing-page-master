@@ -7,8 +7,8 @@ $breakpoint: (
   medium: 48rem,
   // 992px
   large: 62rem,
-  // 1440px
-  x-large: 90rem
+  // 1200px
+  x-large: 75rem
 );
 
 @mixin mq($key, $type) {

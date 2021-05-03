@@ -1,17 +1,24 @@
 @use '../abstracts/breakpoint' as *;
 
 .container {
-  // margin-left: 1.5rem;
-  // margin-right: 1.5rem;
-  width: 90%;
-  margin: 0 auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
 
   @include mq(small, up) {
     width: 80%;
-    // margin: 0 auto;
+    max-width: 36rem;
+    margin: 0 auto;
   }
 
   @include mq(medium, up) {
-    width: 70%;
+    width: 85%;
+    max-width: 46rem;
+    margin: 0 auto;
   }
+  @include mq(large, up) {
+    max-width: 72rem;
+  }
+  // @include mq(large, up) {
+  //   width: 70%;
+  // }
 }
