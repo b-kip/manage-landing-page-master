@@ -11,3 +11,7 @@ menuButton.addEventListener('click', function(){
 });
 
 console.log("JS added!");
+
+if (module.hot) {
+  module.hot.accept();
+}
