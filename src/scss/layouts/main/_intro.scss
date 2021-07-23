@@ -3,6 +3,44 @@
 .intro {
   text-align: center;
   margin-top: 3rem;
+  position: relative;
+
+  &:after {
+    // content: '11';
+    // position: absolute;
+    // width: 100%;
+    // height: 81.4rem;
+    // background-image: url('../../assets/images/bg-tablet-pattern.svg');
+    // background-repeat: no-repeat;
+    // background-size: 125% auto;
+    // background-position: calc(50% + 25vw) -30vw;
+    // bottom: -10%;
+    // right: 0;
+    // z-index: -100;
+
+    // @include media(475px) {
+    //   background-size: 57rem auto;
+    //   background-position: calc(50% + 25vw) -30vw;
+    // }
+
+    // @include media(530px) {
+    //   background-position: calc(50% + 20vw) -25vw;
+    // }
+
+    // @include mq(medium, up) {
+    //   background-size: 70% auto;
+    //   background-position: calc(50% + 40vw) -20vw;
+    // }
+
+    // @include mq(large, up) {
+    //   background-position: calc(50% + 40vw) -12vw;
+    // }
+
+    // @include mq(x-large, up) {
+    //   background-size: auto;
+    //   background-position: calc(50% + 46rem) -15.4rem;
+    // }
+  }
 
   .container {
     display: flex;
