@@ -1,4 +1,71 @@
+@use '../abstracts/breakpoint' as *;
+
 .testimonials {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  text-align: center;
+
+  &__list {
+    margin-top: 4rem !important;
+    padding-top: 1.5rem !important; //correct background image clipping
+    cursor: pointer;
+
+    &__item {
+      --flow-spacer: 1.5rem;
+      font-size: 0.85rem;
+      background-color: var(--clr-neutral-gray-100);
+      padding: 2rem 1.25rem;
+      margin-top: 1rem;
+      position: relative;
+
+      @include mq(large, up) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        font-size: 1rem;
+      }
+
+      &__image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 72px;
+        width: 72px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-size: cover;
+        background-clip: padding-box;
+        -webkit-background-clip: padding-box;
+      }
+
+      &__info {
+        --flow-spacer:1.5rem;
+      }
+    }
+  }
+
+  &__controls {
+    // background-color: red;
+    // height: 100px;
+    margin-top: 1rem;
+    &__button {
+      padding: 0;
+      width: 8px;
+      height: 8px;
+      border: 1px solid var(--clr-primary-red);
+      border-radius: 50%;
+      background-color: transparent;
+      cursor: pointer;
+
+      &--active {
+        background-color: var(--clr-primary-red);
+      }
+    }
+    .glide__bullet--active {
+      background-color: var(--clr-primary-red);
+    }
+  }
+
+  .btn {
+    margin-top: 2.5rem;
+  }
 }
