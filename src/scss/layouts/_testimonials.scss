@@ -47,6 +47,10 @@
     // background-color: red;
     // height: 100px;
     margin-top: 1rem;
+
+    @include mq(large, up) {
+      display: none;
+    }
     &__button {
       padding: 0;
       width: 8px;
