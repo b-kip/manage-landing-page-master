@@ -11,7 +11,7 @@
 	// background-size: contain;
 	margin-top: 3rem;
 
-	@include mq(x-large, up) {
+	@include mq(x-large, 'up') {
 		margin-top: 10rem;
 	}
 	
