@@ -9,7 +9,11 @@
 	background-repeat: no-repeat;
 	background-position: left center;
 	// background-size: contain;
-	margin-top: 13rem;
+	margin-top: 3rem;
+
+	@include mq(x-large, up) {
+		margin-top: 10rem;
+	}
 	
 	@include mq(medium, 'up') {
 		text-align: left;
