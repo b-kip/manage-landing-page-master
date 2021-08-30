@@ -1,7 +1,10 @@
+import Glide from "@glidejs/glide";
+
 const overlay = document.getElementById('js-overlay');
 const menuButton = document.getElementById('js-menu-button');
 const nav = document.getElementById('js-nav');
-import Glide from "@glidejs/glide";
+const registration_form = document.getElementsByClassName('js-registration-form')[0];
+const registration_form_error_message = document.querySelector('.registration-form__error-message');
 
 menuButton.addEventListener('click', function(){
   console.log('Button Clicked!')
@@ -9,6 +12,22 @@ menuButton.addEventListener('click', function(){
   menuButton.classList.toggle('clicked');
   overlay.classList.toggle('hidden');
   nav.classList.toggle('hidden');
+});
+
+registration_form.addEventListener('submit', (e) => {
+  e.preventDefault();  
+  const email_input = registration_form.elements["email"];
+
+  if(email_input.validity.valid) {
+    console.log("Form is valid");
+    registration_form_error_message.style.display = "none";
+    registration_form.classList.remove('registration-form--error');
+    // add form submission logic here
+    console.log('submitted');
+    return;
+  }
+  registration_form_error_message.style.display = "block";
+  registration_form.classList.add('registration-form--error');
 });
 
 console.log("JS added!");

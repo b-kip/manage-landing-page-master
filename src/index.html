@@ -158,12 +158,13 @@
   <footer class="footer">
 
     <div class="container">
-      <form action="" class="registration-form">
-        <input type="text" placeholder="Updates in your inbox…">
-        <button class="registration-form__btn btn btn--accent"> Go</button>
+      <form action="" name="registration-form" class="registration-form js-registration-form" novalidate>
+        <div class="registration-form__container">
+          <input type="email" name="email" placeholder="Updates in your inbox…" class="registration-form__email-input">
+          <input type="submit" class="registration-form__btn btn btn--accent" value="Go"/>
+        </div>
+        <p class="registration-form__error-message">Please insert a valid email</p>
       </form>
-      <!-- <div class="links">
-      </div> -->
       <ul class="links__list links__list--left">
         <li class="links__list__item"><a class="anchor-link" href="">Home</a></li>
         <li class="links__list__item"><a class="anchor-link" href="">Pricing</a></li>
