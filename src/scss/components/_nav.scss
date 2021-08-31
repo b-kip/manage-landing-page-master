@@ -23,6 +23,10 @@
       padding: 1.5em 0;
     }
 
+    @include mq(x-large, up) {
+      background-color: transparent;
+    }
+
     &__item {
       font-weight: var(--fw-bold);
       padding-top: 0.75rem;
