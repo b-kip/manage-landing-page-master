@@ -75,10 +75,11 @@
   }
 
   &__image {
-    // background-image: url('../../assets/images/illustration-intro.svg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // height: 100px;
-    // order: 0;
+    @include mq(large, up) {
+      margin-right: -.95rem;
+    }
+    @include mq(large, up) {
+      margin-right: -1.25rem;
+    }
   }
 }
