@@ -5,37 +5,39 @@
   &:before {
     content: '';
     position: absolute;
+    top: 0;
+    right: 0;
     width: 100%;
     height: 81.4rem;
     background-image: url('../../assets/images/bg-tablet-pattern.svg');
     background-repeat: no-repeat;
-    background-size: 125% auto;
-    background-position: calc(50% + 25vw) -30vw;
-    top: 0;
-    right: 0;
+    // background-size: 125% auto;
+    background-size: 115%;
+    // background-position: calc(50% + 25vw) -30vw;
+    background-position: top -12% right -125px;
     z-index: -100;
 
     @include media(475px) {
-      background-size: 57rem auto;
-      background-position: calc(50% + 25vw) -30vw;
+      // background-size: 57rem auto;
+      // background-position: calc(50% + 25vw) -30vw;
     }
 
     @include media(530px) {
-      background-position: calc(50% + 20vw) -25vw;
+      // background-position: calc(50% + 20vw) -25vw;
     }
 
     @include mq(medium, up) {
-      background-size: 70% auto;
-      background-position: calc(50% + 40vw) -20vw;
+      // background-size: 70% auto;
+      // background-position: calc(50% + 40vw) -20vw;
     }
 
     @include mq(large, up) {
-      background-position: calc(50% + 40vw) -12vw;
+      // background-position: calc(50% + 40vw) -12vw;
     }
 
     @include mq(x-large, up) {
-      background-size: auto;
-      background-position: calc(50% + 46rem) -15.4rem;
+      // background-size: auto;
+      // background-position: calc(50% + 46rem) -15.4rem;
     }
   }
 
@@ -66,6 +68,8 @@
 }
 
 .logo {
+  height: 18px; // to match hamburger's height
+  margin-top: 6px; // top alignment with hamburger
   // @include mq(small, down) {
   //   width: 75%;
   // }

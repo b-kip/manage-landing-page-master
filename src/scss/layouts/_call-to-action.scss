@@ -9,7 +9,7 @@
 	background-repeat: no-repeat;
 	background-position: left center;
 	// background-size: contain;
-	margin-top: 3rem;
+	margin-top: clamp(3rem, 13.5vw, 10rem);
 
 	@include mq(x-large, 'up') {
 		margin-top: 10rem;
