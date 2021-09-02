@@ -6,7 +6,7 @@
   z-index: var(--zindex-modal);
   margin-top: 3rem;
 
-  @include mq(x-large, up) {
+  @include mq(large, up) {
     z-index: 0;
     display: flex;
     justify-content: space-between;
@@ -32,17 +32,19 @@
       padding-top: 0.75rem;
       padding-bottom: 0.75rem;
 
-      @include mq(x-large, up) {
+      @include mq(large, up) {
         padding-top: 0;
         padding-bottom: 0;
       }
 
       & + & {
-        margin: 0 0 0 2rem;
+        @include mq(large, up) {
+          margin: 0 0 0 2rem;
+        }
       }
     }
 
-    @include mq(x-large, up) {
+    @include mq(large, up) {
       display: flex;
     }
   }
