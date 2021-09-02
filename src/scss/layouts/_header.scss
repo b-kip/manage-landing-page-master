@@ -1,43 +1,83 @@
 @use '../abstracts/breakpoint' as *;
 .main-header {
-  margin-top: 2.5rem;
+  padding-top: 2.5rem;
 
-  &:before {
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   width: 100%;
+  //   height: 45.4rem;
+  //   background-image: url('../../assets/images/bg-tablet-pattern.svg');
+  //   background-repeat: no-repeat;
+  //   background-size: 118%;
+  //   background-position: top -29% right -129px;
+  //   z-index: -100;
+
+  //   @include media(475px) {
+  //     // background-size: 57rem auto;
+  //     // background-position: calc(50% + 25vw) -30vw;
+  //   }
+
+  //   @include media(530px) {
+  //     // background-position: calc(50% + 20vw) -25vw;
+  //   }
+
+  //   @include mq(medium, up) {
+  //     // background-size: 70% auto;
+  //     // background-position: calc(50% + 40vw) -20vw;
+  //   }
+
+  //   @include mq(large, up) {
+  //     // background-position: calc(50% + 40vw) -12vw;
+  //   }
+
+  //   @include mq(x-large, up) {
+  //     background-size: 66%;
+  //     background-position: top -158px right -51%;
+  //   }
+    
+  //   @include media(1440px) {
+  //     background-size: 55%;
+  //     background-position: top -148px right -23%;
+  //   }
+
+  // referenced ksenia's work from https://github.com/ksenius
+  &::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
     width: 100%;
-    height: 81.4rem;
+    height: 50.875rem;
     background-image: url('../../assets/images/bg-tablet-pattern.svg');
     background-repeat: no-repeat;
-    // background-size: 125% auto;
-    background-size: 115%;
-    // background-position: calc(50% + 25vw) -30vw;
-    background-position: top -12% right -125px;
-    z-index: -100;
+    background-size: 125% auto;
+    background-position: calc(50% + 25vw) -30vw;
+    top: 0;
+    right: 0;
+    z-index: -1999;
 
-    @include media(475px) {
-      // background-size: 57rem auto;
-      // background-position: calc(50% + 25vw) -30vw;
+    @media (min-width: 475px)  {
+      background-size: 35.625rem auto;
+      background-position: calc(50% + 25vw) -30vw;
     }
 
-    @include media(530px) {
-      // background-position: calc(50% + 20vw) -25vw;
+    @media (min-width: 530px)  {
+      background-position: calc(50% + 20vw) -25vw;
     }
 
-    @include mq(medium, up) {
-      // background-size: 70% auto;
-      // background-position: calc(50% + 40vw) -20vw;
+    @media (min-width: 768px)  {
+      background-size: 70% auto;
+      background-position: calc(50% + 40vw) -20vw;
     }
 
-    @include mq(large, up) {
-      // background-position: calc(50% + 40vw) -12vw;
+    @media (min-width: 1000px)  {
+      background-position: calc(50% + 40vw) -12vw;
     }
 
-    @include mq(x-large, up) {
-      // background-size: auto;
-      // background-position: calc(50% + 46rem) -15.4rem;
+    @media (min-width: 1200px) {
+      background-size: auto;
+      background-position: calc(50% + 28.75rem) -9.625rem;
     }
   }
 

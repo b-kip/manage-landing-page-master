@@ -1,6 +1,69 @@
 @use '../../abstracts/breakpoint' as *;
 
 .services {
+  position: relative;
+
+  // ::before {
+  //   content: '';
+  //   width: 100%;
+  //   // height: 100%;
+  //   bottom: 0%;
+  //   // display: block;
+  //   position: absolute;
+  //   top: -35%;
+  //   right: 0%;
+  //   background-image: url('../../assets/images/bg-tablet-pattern.svg');
+  //   // background-color: green;
+  //   background-repeat: no-repeat;
+  //   background-size: 71%;
+  //   background-position: top 0px right -128%;
+  //   z-index: -100;
+
+  //   @include mq(large, up) {
+  //     top: 0%;
+  //     bottom: -56%;
+  //     background-position: left -532px bottom -239px;
+  //     background-size: 59%;
+  //   }
+  // }
+
+  // referenced ksenia's work from https://github.com/ksenius
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50.875rem;
+    background-image: url('../../assets/images/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+    background-position: calc(50% + 55vw) top;
+    top: -70vw;
+    right: 0;
+    z-index: -1999;
+
+    @media (min-width:530px) {
+      top: -23.125rem;
+      background-size: 29.8125rem auto;
+      background-position: calc(50% + 60vw) top;
+    }
+
+    @media (min-width: 768px) {
+      top: 20vw;
+      background-size: 70% auto;
+      background-position: calc(0% - 50vw) bottom;
+    }
+
+    @media (min-width: 1000px) {
+      top: 35vw;
+    }
+
+    @media (min-width: 1200px) {
+      top: 15.875rem;
+      background-size: auto;
+      background-position: calc(50% - 52rem) bottom;
+    }
+  }
+
   .container {
     margin-left: clamp(1.5rem, 6.4vw, 16rem);
     margin-right: 0;
