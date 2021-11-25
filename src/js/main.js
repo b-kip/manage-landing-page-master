@@ -4,6 +4,7 @@ const overlay = document.getElementById('js-overlay');
 const menuButton = document.getElementById('js-menu-button');
 const nav = document.getElementById('js-nav');
 const registration_form = document.getElementsByClassName('js-registration-form')[0];
+const email_input = registration_form.elements["email"];
 const registration_form_error_message = document.querySelector('.registration-form__error-message');
 
 menuButton.addEventListener('click', function(){
@@ -16,19 +17,31 @@ menuButton.addEventListener('click', function(){
 
 registration_form.addEventListener('submit', (e) => {
   e.preventDefault();  
-  const email_input = registration_form.elements["email"];
 
-  if(email_input.validity.valid) {
-    console.log("Form is valid");
-    registration_form_error_message.style.display = "none";
-    registration_form.classList.remove('registration-form--error');
+  if(!email_input.validity.valid) {
+    console.log("Form is invalid");
+    showError();
     // add form submission logic here
+  } else {
     console.log('submitted');
-    return;
   }
-  registration_form_error_message.style.display = "block";
-  registration_form.classList.add('registration-form--error');
 });
+
+email_input.addEventListener('input', () => {
+  if(!email_input.validity.valid) {
+    // console.log("Input is invalid");
+    showError();
+  } else {
+    // console.log("Input is valid");
+    registration_form_error_message.classList.remove("show");
+    registration_form.classList.remove('registration-form--error');
+  }
+});
+
+function showError() {
+  registration_form_error_message.classList.add("show");
+  registration_form.classList.add('registration-form--error');
+}
 
 console.log("JS added!");
 
