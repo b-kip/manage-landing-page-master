@@ -22,8 +22,8 @@ The Frontend Mentor challenge requirements were to ensure that the user should b
 
 ### Links
 
-- [View solution code](https://github.com/b-kip/url-shortening-api-master)
-- [View live site](https://url-shortening-api-master-psi.vercel.app)
+- [View solution code](https://github.com/b-kip/manage-landing-page-master)
+- [View live site](https://manage-ecru.vercel.app/)
 ## My process
 
 ### Built with
